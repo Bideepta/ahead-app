@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, CardGroup } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import Timeline from "../timeline/timeline";
-import Color_timeline from "../color-timeline/color-timeline";
+import ColorTimeline from "../color-timeline/color-timeline";
 
 function Rate() {
   const containerStyle = {
@@ -24,7 +24,7 @@ function Rate() {
 
   return (
     <div style={containerStyle}>
-      <Card style={cardStyle}>
+      <Card className="cardRate" style={cardStyle}>
         <Card.Body>
           <Card.Text
             style={{ fontSize: 18, fontWeight: 500, textAlign: "center" }}
@@ -43,9 +43,9 @@ function Rate() {
             Ever wondered what others think of you?
           </Card.Title>
           <Timeline />
-          <Card style={{ border: "none", borderRadius: 20, maxWidth: 600 }}>
+          <Card style={{ border: "none", borderRadius: 20, width: 500, margin: 'auto', height:200 }}>
             <Card.Body>
-              <Color_timeline />
+              <ColorTimeline />
             </Card.Body>
           </Card>
         </Card.Body>

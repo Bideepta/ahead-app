@@ -1,23 +1,83 @@
-.horizontal-timeline .items {
-    border-top: dashed rgba(255, 162, 0, 0.915);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    font-size: 15px;
-    border-width: 2px;
+.dashed-line {
+  width: 80%;
+  height: 1px; /* Adjust the height as needed */
+  background: transparent;
+  border-top: 2px dashed #f4a339;
+  margin-top: 60px;
+  margin-left: 100px;
+  margin-bottom: 150px;
 }
 
-.item-list {
-  padding-inline-start: 50px;
-  padding-top: 50px;
+.badge1 {
+  z-index: 1;
+  position: absolute;
+  top: 205px; 
+  left: 230px; 
+  width: 50px;
+  height: 50px;
 }
-  
-  @media (min-width: 1140px) {
-    .horizontal-timeline .items .items-list {
-      display: inline-block;
-      width: 24%;
-      padding-top: 45px;
-    }
-  }
+
+.badge2 {
+  z-index: 1;
+  position: absolute;
+  top: 205px; 
+  left: 570px; 
+  width: 50px;
+  height: 50px;
+}
+
+.badge3 {
+  z-index: 1;
+  position: absolute;
+  top: 205px; 
+  left: 930px; 
+  width: 50px;
+  height: 50px;
+}
+
+.one {
+  z-index: 1;
+  position: absolute;
+  top: 215px; 
+  left: 240px; 
+  width: 30px;
+  height: 30px;
+}
+
+.two {
+  z-index: 1;
+  position: absolute;
+  top: 215px; 
+  left: 580px; 
+  width: 30px;
+  height: 30px;
+}
+
+.three {
+  z-index: 1;
+  position: absolute;
+  top: 215px; 
+  left: 940px; 
+  width: 30px;
+  height: 30px;
+}
+
+.text1 {
+  position: absolute;
+  top: 270px; 
+  left: 130px; 
+}
+
+.text2 {
+  position: absolute;
+  top: 270px; 
+  left: 460px; 
+  text-align: center;
+}
+
+.text3 {
+  position: absolute;
+  top: 270px; 
+  left: 820px; 
+  text-align: center;
+}

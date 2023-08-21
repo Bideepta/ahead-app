@@ -1,30 +1,173 @@
-.horizontal-timeline {
+.line {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
+  height: 1px;
+  background: transparent;
+  border-top: 2px solid #dddddd;
+  margin: auto;
+  margin-top: 80px;
 }
 
-.timeline-container {
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid #ccc;
-  padding: 10px 0;
+.dotPurple {
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(100, 14, 238);
+  width: 15px;
+  height: 15px;
+  top: 88px;
+  left: 25px;
 }
 
-.timeline-event {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 20px;
+.dotBlue {
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(82, 177, 245);
+  width: 15px;
+  height: 15px;
+  top: 88px;
+  left: 150px;
 }
 
-.event-date {
-  font-size: 14px;
-  font-weight: bold;
+.dotYellow {
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(248, 196, 7);
+  width: 15px;
+  height: 15px;
+  top: 88px;
+  left: 320px;
 }
 
-.event-title {
-  font-size: 16px;
+.dotGreen {
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(41, 170, 78);
+  width: 15px;
+  height: 15px;
+  top: 88px;
+  left: 460px;
+}
+
+/* .dotPurple, .dotBlue, .dotYellow, .dotGreen {
+  transition: transform 0.4s ease-in-out;
+} */
+
+.boxPurple {
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgb(100, 14, 238);
+  width: 45px;
+  height: 28px;
+  top: 52px;
+  left: -12px;
+  text-align: center;
+  color: white;
+  font-size: small;
+  font-weight: 500;
+  padding-top: 2px;
+}
+
+.boxBlue {
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgb(82, 177, 245);
+  width: 115px;
+  height: 28px;
+  top: 120px;
+  left: 110px;
+  text-align: center;
+  color: white;
+  font-size: small;
+  font-weight: 500;
+  padding-top: 2px;
+}
+
+.boxYellow {
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgb(248, 196, 7);
+  width: 115px;
+  height: 28px;
+  top: 40px;
+  left: 280px;
+  text-align: center;
+  color: white;
+  font-size: small;
+  font-weight: 500;
+  padding-top: 2px;
+}
+
+.boxGreen {
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgb(41, 170, 78);
+  width: 115px;
+  height: 28px;
+  top: 120px;
+  left: 430px;
+  text-align: center;
+  color: white;
+  font-size: small;
+  font-weight: 500;
+  padding-top: 2px;
+}
+
+/* ... Existing styles ... */
+
+/* For the pop-in animation on boxes */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* For the pulse-in animation on circle dots */
+@keyframes pulseIn {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Apply animations when triggered */
+.line.animate {
+  animation: popIn 0.5s ease-in-out forwards;
+}
+
+.dotPurple.animate,
+.dotBlue.animate,
+.dotYellow.animate,
+.dotGreen.animate {
+  animation: pulseIn 1.5s infinite;
+}
+.timeline-container.animate .line {
+  animation: popIn 0.5s ease-in-out forwards;
+}
+
+.timeline-container.animate .dotPurple,
+.timeline-container.animate .dotBlue,
+.timeline-container.animate .dotYellow,
+.timeline-container.animate .dotGreen {
+  animation: pulseIn 1.5s infinite;
+}
+
+.boxPurple.animate,
+.boxBlue.animate,
+.boxYellow.animate,
+.boxGreen.animate {
+  animation: pulseIn 1.5s infinite;
 }

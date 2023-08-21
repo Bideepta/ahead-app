@@ -51,6 +51,7 @@ function Test_Page() {
 
   return (
     <div className="text-center">
+    <Card  style={{paddingTop:100, paddingBottom:100, border:'none'}}>
       <Card.Body>
         <Card.Text style={textStyle1}>We take privacy seriously</Card.Text>
         <Card.Title style={titleStyle}>Before you get started</Card.Title>
@@ -66,6 +67,7 @@ function Test_Page() {
         <Button variant="dark" style={buttonStyle}>Start a test</Button>
         <Card.Text style={textStyle3}>Take only 5 minutes</Card.Text>
       </Card.Body>
+    </Card>
     </div>
   );
 }

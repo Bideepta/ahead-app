@@ -1,0 +1,11 @@
+.smallCard{
+    transition: transform 0.3s;
+}
+.smallCard:hover{
+    transform: rotate(-15deg);
+}
+.hiddenCard {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 15s ease, transform 15s ease;
+}

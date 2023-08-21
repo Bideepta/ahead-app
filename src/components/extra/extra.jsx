@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 function Extrabase() {
   return(
     <div className="extrabase">
-      <Card.Body style={{display: 'flex', justifyContent: 'space-evenly', paddingTop: 120, paddingBottom: 120}}>
+      <Card.Body style={{display: 'flex', justifyContent: 'space-evenly', paddingTop: 160, paddingBottom: 160}}>
         <Card.Title style={{fontSize: 35,paddingLeft: 40}}>Be the best you <br />with EQ</Card.Title>
         <Card.Text style={{fontSize:22,paddingLeft: 50}}>Not having your own emotions <br />
            under control might be holding <br />

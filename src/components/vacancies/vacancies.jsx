@@ -19,7 +19,7 @@ const MyPage = () => {
     maxWidth: "300px",
     height: "auto",
     margin: "20px",
-    border: "1px ridge #EAC696",
+    border: "none",
     borderRadius: "12px",
     backgroundColor: "#FFEECC",
     padding: "10px",

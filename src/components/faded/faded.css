@@ -2,23 +2,31 @@
     border-left: 1px solid rgb(94, 11, 249);
     position: relative;
     list-style: none;
-}
+  }
   
-.timeline .timeline-item {
+  .timeline .timeline-item {
     position: relative;
-}
+  }
   
-.timeline .timeline-item:after {
+  .timeline .timeline-item:after {
     position: absolute;
     display: block;
     top: 0;
-}
+  }
   
-.timeline .timeline-item:after {
+  .timeline .timeline-item:after {
     background-color: rgb(105, 12, 255);
     left: -38px;
     border-radius: 50%;
     height: 11px;
     width: 11px;
     content: "";
-}
+  }
+  
+  /* New styles for the fade effect */
+  .timeline .timeline-item.fade {
+    position: relative;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Add a fade transition */
+  }
+  
