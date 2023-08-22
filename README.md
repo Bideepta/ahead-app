@@ -19,8 +19,7 @@ Welcome to **Ahead App**, a dynamic and visually appealing frontend React UI pro
 
 Ahead App is a React-based user interface project designed to showcase modern UI components and animations. The project aims to provide a visually pleasing and interactive experience for users.
 
-![image](https://github.com/Bideepta/ahead-app/assets/108573540/6b44ffaf-d078-4168-adae-b5a91fa68ebf)
-
+![image](https://github.com/Bideepta/ahead-app/assets/108573540/98f2acc0-6717-4020-85f1-62467a298e81)
 
 ## Features
 
