@@ -174,11 +174,11 @@ const MyPage = () => {
         <div style={{ display: "flex", alignItems: "center" }}>
           <div style={{ display: "flex", padding: 15 }}>
             <img src="/location.png" alt="location" style={{ height: 25 }} />
-            <Card.Text style={{ color: "black" }}>20117, Berlin</Card.Text>
+            <Card.Text style={{ color: "black", marginLeft: 3 }}>20117, Berlin</Card.Text>
           </div>
           <div style={{ display: "flex", padding: 15 }}>
             <img src="/email.png" alt="email" style={{ height: 25 }} />
-            <Card.Text style={{ color: "black" }}>hi@ahead-app.com</Card.Text>
+            <Card.Text style={{ color: "black", marginLeft: 3 }}>hi@ahead-app.com</Card.Text>
           </div>
         </div>
         <img
@@ -188,6 +188,9 @@ const MyPage = () => {
         />
         <Card.Text style={{ color: "gray" }}>
           © 2023 Ahead app. All right reserved
+        </Card.Text>
+        <Card.Text style={{ color: "lightgray", fontSize: 12, marginTop: 0 }}>
+          by Bideepta Saha: bideepta682@gmail.com
         </Card.Text>
       </div>
     </div>

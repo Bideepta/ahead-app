@@ -68,15 +68,15 @@ const CardComponent = () => {
 
   const fadeInAnimation1 = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 5 } },
+    visible: { opacity: 1, transition: { duration: 4 } },
   };
   const fadeInAnimation2 = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 7 } },
+    visible: { opacity: 1, transition: { duration: 5 } },
   };
   const fadeInAnimation3 = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 9 } },
+    visible: { opacity: 1, transition: { duration: 6 } },
   };
 
   return (
