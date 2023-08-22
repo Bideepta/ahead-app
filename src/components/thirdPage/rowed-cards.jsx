@@ -11,7 +11,7 @@ function Row_of_card() {
     paddingTop: 55,
   };
   const cardStyle1 = {
-    maxWidth: "300px",
+    minWidth: "300px",
     height: "auto",
     margin: "20px",
     borderRadius: "12px",
@@ -22,7 +22,7 @@ function Row_of_card() {
     transform: "translateX(100px)",
   };
   const cardStyle2 = {
-    maxWidth: "300px",
+    minWidth: "300px",
     height: "auto",
     margin: "20px",
     borderRadius: "12px",
@@ -33,7 +33,7 @@ function Row_of_card() {
     transform: "translateX(100px)",
   };
   const cardStyle3 = {
-    maxWidth: "300px",
+    minWidth: "300px",
     height: "auto",
     margin: "20px",
     borderRadius: "12px",
@@ -44,7 +44,7 @@ function Row_of_card() {
     border: "none",
   };
   const cardStyle4 = {
-    maxWidth: "300px",
+    minWidth: "300px",
     height: "auto",
     margin: "20px",
     borderRadius: "12px",
@@ -79,7 +79,7 @@ function Row_of_card() {
         }
       });
     };
-    
+
     const observer = new IntersectionObserver(handleIntersection, options);
 
     cardRefs.current.forEach((cardRef) => {
@@ -115,74 +115,148 @@ function Row_of_card() {
               }}
             />
           </div>
-          <CardGroup>
-            <Card
-              ref={(ref) => cardRefs.current.push(ref)}
-              className={`smallCard ${hiddenCard}`}
-              style={cardStyle1}
-            >
-              <Card.Body>
-                <img src="/in-love.png" alt="in-love" style={emojiStyle} />
-                <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
-                  You argue with a colleague
-                </Card.Title>
-                <Card.Text style={{ fontSize: 14 }}>
-                  You get angry and defensive, instead of staying open and
-                  working towards common ground.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card
-              ref={(ref) => cardRefs.current.push(ref)}
-              className={`smallCard ${hiddenCard}`}
-              style={cardStyle2}
-            >
-              <Card.Body>
-                <img src="/angry.png" alt="angry" style={emojiStyle} />
+          <div className="container1">
+            <div className="cardGroup">
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle1}
+              >
+                <Card.Body>
+                  <img src="/in-love.png" alt="in-love" style={emojiStyle} />
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You argue with a colleague
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You get angry and defensive, instead of staying open and
+                    working towards common ground.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle2}
+              >
+                <Card.Body>
+                  <img src="/angry.png" alt="angry" style={emojiStyle} />
 
-                <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
-                  You argue with a colleague
-                </Card.Title>
-                <Card.Text style={{ fontSize: 14 }}>
-                  You get angry and defensive, instead of staying open and
-                  working towards common ground.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card ref={(ref) => cardRefs.current.push(ref)}
-              className={`smallCard ${hiddenCard}`} style={cardStyle3}>
-              <Card.Body>
-                <img src="/happy.png" alt="happy" style={emojiStyle} />
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You argue with a colleague
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You get angry and defensive, instead of staying open and
+                    working towards common ground.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle3}
+              >
+                <Card.Body>
+                  <img src="/happy.png" alt="happy" style={emojiStyle} />
 
-                <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
-                  You get a promotion at work
-                </Card.Title>
-                <Card.Text style={{ fontSize: 14 }}>
-                  You question yourself and wonder when they'll realize you're
-                  an unqualified imposter, instead of trusting yourself & your
-                  abilities
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card
-              ref={(ref) => cardRefs.current.push(ref)}
-              className={`smallCard ${hiddenCard}`}
-              style={cardStyle4}
-            >
-              <Card.Body>
-                <img src="/sweating.png" alt="sweating" style={emojiStyle} />
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You get a promotion at work
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You question yourself and wonder when they'll realize you're
+                    an unqualified imposter, instead of trusting yourself & your
+                    abilities
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle4}
+              >
+                <Card.Body>
+                  <img src="/sweating.png" alt="sweating" style={emojiStyle} />
 
-                <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
-                  You get a promotion at work
-                </Card.Title>
-                <Card.Text style={{ fontSize: 14 }}>
-                  You question yourself and wonder when they'll realize you're
-                  an unqualified imposter, instead of trusting yourself & your
-                  abilities
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </CardGroup>
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You get a promotion at work
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You question yourself and wonder when they'll realize you're
+                    an unqualified imposter, instead of trusting yourself & your
+                    abilities
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle1}
+              >
+                <Card.Body>
+                  <img src="/in-love.png" alt="in-love" style={emojiStyle} />
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You argue with a colleague
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You get angry and defensive, instead of staying open and
+                    working towards common ground.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle2}
+              >
+                <Card.Body>
+                  <img src="/angry.png" alt="angry" style={emojiStyle} />
+
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You argue with a colleague
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You get angry and defensive, instead of staying open and
+                    working towards common ground.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle3}
+              >
+                <Card.Body>
+                  <img src="/happy.png" alt="happy" style={emojiStyle} />
+
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You get a promotion at work
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You question yourself and wonder when they'll realize you're
+                    an unqualified imposter, instead of trusting yourself & your
+                    abilities
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="smallCard"
+                style={cardStyle4}
+              >
+                <Card.Body>
+                  <img src="/sweating.png" alt="sweating" style={emojiStyle} />
+
+                  <Card.Title style={{ fontSize: 18, paddingTop: 20 }}>
+                    You get a promotion at work
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: 14 }}>
+                    You question yourself and wonder when they'll realize you're
+                    an unqualified imposter, instead of trusting yourself & your
+                    abilities
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
         </Card>
       </div>
     </div>

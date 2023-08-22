@@ -1,6 +1,7 @@
 import React from "react";
-import { Card, CardGroup } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./about.css";
+import { motion } from "framer-motion";
 
 function About() {
   const containerStyle = {
@@ -23,11 +24,11 @@ function About() {
     width: 250,
     height: 250,
     backgroundColor: "#B3C890",
-    borderRadius: "0 55% 0 75%",
+    borderRadius: "55% 0% 50% 15%",
     bottom: 30,
-    left: -250,
+    left: 20,
     transformOrigin: "top right",
-    transform: "rotate(-90deg)",
+    transform: "rotate(90deg)",
   };
   const monsterStyle = {
     border: "none",
@@ -79,8 +80,19 @@ function About() {
             better, more fulfilling.
           </Card.Text>
         </Card.Body>
-        <div className="semi-circle" style={semicircleStyle}></div>
-        <div
+        <motion.div
+          className="semi-circle"
+          style={semicircleStyle}
+          initial={{ rotate: 0, y: 10 }}
+          animate={{ y: [10, 0, 10], rotate: [10, 0, 10] }}
+          transition={{
+            repeat: Infinity, // Repeat the animation indefinitely
+            repeatType: "reverse", // Reverse the animation after each repeat
+            duration: 2, // Duration of each animation cycle
+            ease: "linear", // Easing function
+          }}
+        ></motion.div>
+        <motion.div
           className="semi-circle1"
           style={{
             position: "absolute",
@@ -89,16 +101,32 @@ function About() {
             backgroundColor: "#5D9C59",
             borderRadius: "0 65% 0 105%",
             top: 0,
-            right: "65%",
+            left: "25%",
             transformOrigin: "top right",
             transform: "rotate(0deg)",
             zIndex: 1,
           }}
-        ></div>
+          initial={{ rotate: 0, y: 10 }} // Initial position
+          animate={{ y: [10, 0, 10], rotate: [5, 0, 5] }} // Animated rotation
+          transition={{
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 2,
+            ease: "linear",
+          }}
+        ></motion.div>
         <div className="circ"></div>
         <div className="circ-cir"></div>
         <img src="/monster10.png" style={monsterStyle} />
-        <img src="/flower.png" alt="flower" style={flowerStyle} />
+        <motion.img
+          src="/flower.png"
+          alt="flower"
+          style={flowerStyle}
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        ></motion.img>
+        {/* <img src="/flower.png" alt="flower" style={flowerStyle} /> */}
         <img src="/luck.png" alt="luck" style={badgeStyle} />
         <img
           src="/monster7.png"
@@ -124,20 +152,25 @@ function About() {
           }}
         />
         <img
-            src="/semicircle (1).png"
-            style={{
-              width: 60,
-              height: 60,
-              bottom: -15,
-              zIndex: 1,
-              position: "absolute",
-              right:-15,
-              bottom: 80,
-              transform: 'rotate(90deg)',
-            }}
-          />
+          src="/semicircle (1).png"
+          style={{
+            width: 60,
+            height: 60,
+            bottom: -15,
+            zIndex: 1,
+            position: "absolute",
+            right: -15,
+            bottom: 80,
+            transform: "rotate(90deg)",
+          }}
+        />
         <div className="circlelar"></div>
-        <div className="circlelar1"></div>
+        <motion.div
+          className="circlelar1"
+          initial={{ y: 0 }}
+          animate={{ y: [-10, 0, -10, 10, -10] }} // Bounce pattern
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        ></motion.div>
       </Card>
     </div>
   );

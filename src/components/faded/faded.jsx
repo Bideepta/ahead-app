@@ -10,9 +10,23 @@ function Faded() {
       timelineItems.forEach((item, index) => {
         const rect = item.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight * 0.8;
-        item.style.opacity = isVisible ? 1 : 0;
+    
+        // Calculate opacity and scale based on visibility
+        const opacity = isVisible ? 1 : 0.5;
+        const scale = isVisible ? 1 : 0.8;
+    
+        item.style.opacity = opacity;
+        item.style.transform = `scale(${scale})`;
+    
+        // Highlight the current event
+        if (isVisible) {
+          item.classList.add("highlight");
+        } else {
+          item.classList.remove("highlight");
+        }
       });
     };
+       
 
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Call it once to set initial visibility

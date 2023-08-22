@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardGroup } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import "./card.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CardComponent = () => {
   const imageSize = {
@@ -26,6 +27,7 @@ const CardComponent = () => {
   const contentStyle = {
     display: "flex",
     alignItems: "center",
+    position: "relative",
   };
   const contain = {
     display: "block",
@@ -52,6 +54,7 @@ const CardComponent = () => {
     opacity: 0.8,
     transform: "rotate(4deg)",
   };
+  
   const monster2Style = {
     position: "absolute",
     zIndex: 1,
@@ -59,8 +62,21 @@ const CardComponent = () => {
     height: 210,
     marginLeft: 880,
     marginTop: 400,
-    transform: "scaleX(-1) rotate(8deg)",
     opacity: 1,
+    transform: "scaleX(-1) rotate(18deg)",
+  };
+
+  const fadeInAnimation1 = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 5 } },
+  };
+  const fadeInAnimation2 = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 7 } },
+  };
+  const fadeInAnimation3 = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 9 } },
   };
 
   return (
@@ -71,11 +87,34 @@ const CardComponent = () => {
             <Card.Text style={{ fontSize: 18, marginLeft: 5, marginTop: 130 }}>
               Ahead app
             </Card.Text>
-            <Card.Title style={titleStyle}>
-              Master your life <br />
-              by mastering <br />
-              emotions
-            </Card.Title>
+            <AnimatePresence>
+              <Card.Title>
+                <motion.div
+                  style={titleStyle}
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeInAnimation1}
+                >
+                  Master your life <br />
+                </motion.div>
+                <motion.div
+                  style={titleStyle}
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeInAnimation2}
+                >
+                  by mastering <br />
+                </motion.div>
+                <motion.div
+                  style={titleStyle}
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeInAnimation3}
+                >
+                  emotions
+                </motion.div>
+              </Card.Title>
+            </AnimatePresence>
           </Card.Body>
           <div style={contentStyle}>
             <Card.Img
@@ -96,9 +135,24 @@ const CardComponent = () => {
               </Card.Text>
             </div>
           </div>
-          <div className="circle_dotted"></div>
-          <div className="circle_dotted2"></div>
-          <div className="circle_dotted3"></div>
+          <motion.div
+            className="circle_dotted"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 5, repeat: 5, ease: "linear" }}
+          ></motion.div>
+          <motion.div
+            className="circle_dotted2"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 10, repeat: 5, ease: "linear" }}
+          ></motion.div>
+          <motion.div
+            className="circle_dotted3"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 15, repeat: 5, ease: "linear" }}
+          ></motion.div>
           <div className="circle"></div>
           <img src="/phone_web.png" style={phoneStyle} />
           <img src="/monster1.png" style={monster1Style} />
@@ -132,7 +186,7 @@ const CardComponent = () => {
             style={{
               width: 40,
               height: 40,
-              transform: 'rotate(90deg)',
+              transform: "rotate(90deg)",
               zIndex: 1,
               position: "absolute",
               left: -9,
@@ -147,7 +201,7 @@ const CardComponent = () => {
               zIndex: 1,
               position: "absolute",
               left: "30%",
-              transform: 'rotate(180deg)',
+              transform: "rotate(180deg)",
             }}
           />
           <img
@@ -159,7 +213,7 @@ const CardComponent = () => {
               zIndex: 1,
               position: "absolute",
               left: "85%",
-              transform: 'rotate(180deg)',
+              transform: "rotate(180deg)",
             }}
           />
           <img
@@ -171,7 +225,7 @@ const CardComponent = () => {
               zIndex: 1,
               position: "absolute",
               left: "40%",
-              transform: 'rotate(180deg)',
+              transform: "rotate(180deg)",
             }}
           />
           <img
@@ -183,7 +237,7 @@ const CardComponent = () => {
               zIndex: 1,
               position: "absolute",
               left: "41.5%",
-              transform: 'rotate(180deg)',
+              transform: "rotate(180deg)",
             }}
           />
           <div
@@ -195,10 +249,10 @@ const CardComponent = () => {
               backgroundColor: "#5D9C59",
               borderRadius: "0 65% 0 105%",
               top: 0,
-              right: '85%',
+              right: "85%",
               transformOrigin: "top right",
               transform: "rotate(0deg) scaleX(-1)",
-              zIndex: 1
+              zIndex: 1,
             }}
           ></div>
         </Card>

@@ -1,11 +1,27 @@
 .smallCard{
     transition: transform 0.3s;
 }
+
 .smallCard:hover{
     transform: rotate(-15deg);
 }
-.hiddenCard {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 15s ease, transform 15s ease;
+
+.container1 {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
+
+.container1::-webkit-scrollbar {
+    display: none; 
+}
+
+.cardGroup {
+    display: flex;
+    gap: 20px; 
+    width: fit-content;
+    padding: 0 20px; 
+}
+    
